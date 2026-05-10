@@ -5,13 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details Form</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f4f4f4; }
-        .container { max-width: 400px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h2 { text-align: center; }
-        label { display: block; margin-top: 16px; }
-        input, select { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
-        button { margin-top: 20px; width: 100%; padding: 10px; background: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #0056b3; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e806cd 0%, #6a82fb 100%);
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 48px auto;
+            background: rgba(255,255,255,0.95);
+            padding: 32px 28px 28px 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(106,130,251,0.18), 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s;
+        }
+        .container:hover {
+            box-shadow: 0 12px 40px rgba(106,130,251,0.25), 0 4px 16px rgba(0,0,0,0.10);
+        }
+        h2 {
+            text-align: center;
+            color: #6a82fb;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        label {
+            display: block;
+            margin-top: 18px;
+            color: #333;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 6px;
+            background: #f8f9fa;
+            font-size: 1rem;
+            transition: border 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        input:focus, select:focus {
+            border: 1.5px solid #6a82fb;
+            box-shadow: 0 0 0 2px #e6eaff;
+        }
+        button {
+            margin-top: 28px;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #6a82fb 0%, #e806cd 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(106,130,251,0.10);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #e806cd 0%, #6a82fb 100%);
+            box-shadow: 0 4px 16px rgba(106,130,251,0.18);
+        }
+        /* Gender radio buttons styling */
+        [name="gender"] {
+            width: auto;
+            margin-right: 6px;
+        }
+        .container div[style] label {
+            margin-right: 18px !important;
+            font-weight: 400;
+            color: #555;
+        }
+        /* Responsive */
+        @media (max-width: 500px) {
+            .container {
+                padding: 16px 4vw 18px 4vw;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            input, select {
+                font-size: 0.98rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -45,9 +125,10 @@
                 <option value="Computer Science">Computer Science</option>
                 <option value="Cybersecurity">Cybersecurity</option>
                 <option value="Mathematical Science">Mathematical Science</option>
-                <option value="Physics">Physics</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Biology">Biology</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Law">Law</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Education">Education</option>
             </select>
 
             <label for="country">Country</label>
